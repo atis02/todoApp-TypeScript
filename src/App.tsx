@@ -40,7 +40,7 @@ function App() {
     setTodo(updatedTodo);
   }
   return (
-    <Box height='100vh'width='100vw' sx={{display:'flex', gap:'100px',justifyContent:'center', alignItems:'center',flexDirection:'column'}}>
+    <Box height='100vh'width='90vw' sx={{display:'flex', gap:'100px',justifyContent:'center', alignItems:'center',flexDirection:'column'}}>
       <Typography fontSize={40} textTransform='uppercase' textAlign='center'>Todo App with TypeScipt</Typography>
       <Stack direction='row' spacing={2} justifyContent='center'>
 
@@ -51,7 +51,7 @@ function App() {
       <Stack  spacing={2}  width={600} minHeight={300}>
         {todo.length==0?(<Typography fontSize={25} color='gray' textAlign='center'>No any todo</Typography>):todo.map((item,index) => 
           (
-          <Stack border='1px solid #000'p={2} height='100%' borderRadius='7px' direction='row'  width='auto' alignItems='center' justifyContent='space-between' key={item.id}>
+          <Stack border='1px solid #000'p={2}  borderRadius='7px' direction='row'  width='auto' alignItems='center' justifyContent='space-between' key={item.id}>
             <Stack direction='row'alignItems='center'>
               <Typography>{index + 1}.</Typography>
               <Checkbox checked={item.completed} onChange={() => toggleComplete(item.id)} />
