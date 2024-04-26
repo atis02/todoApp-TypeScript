@@ -49,7 +49,7 @@ function App() {
         
       </Stack>
       <Stack  spacing={2}  width={600} minHeight={300}>
-        {todo.map((item,index) => 
+        {todo.length==0?(<Typography fontSize={25} color='gray' textAlign='center'>No any todo</Typography>):todo.map((item,index) => 
           (
           <Stack border='1px solid #000'p={2} height='100%' borderRadius='7px' direction='row'  width='auto' alignItems='center' justifyContent='space-between' key={item.id}>
             <Stack direction='row'alignItems='center'>
